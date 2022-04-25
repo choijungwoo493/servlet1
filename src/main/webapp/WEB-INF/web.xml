@@ -47,10 +47,6 @@
     <servlet>
         <servlet-name>counterServlet</servlet-name>
         <servlet-class>com.nhnacademy.servlet.CountServlet</servlet-class>
-        <init-param>
-            <param-name>counter</param-name>
-            <param-value>100</param-value>
-        </init-param>
     </servlet>
     
     <servlet-mapping>
@@ -58,6 +54,19 @@
         <url-pattern>/counter</url-pattern>
     </servlet-mapping>
 
+    <context-param>
+        <param-name>counter</param-name>
+        <param-value>0</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>requestServlet</servlet-name>
+        <servlet-class>com.nhnacademy.servlet.RequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>requestServlet</servlet-name>
+        <url-pattern>/req</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>

@@ -11,6 +11,12 @@ import java.io.PrintWriter;
 
 public class HtmlServlet extends HttpServlet {
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        PrintWriter out = resp.getWriter();
+        out.println(getServletContext().getInitParameter("url"));
+    }
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String[] htmlArray = req.getParameterValues("class");
 

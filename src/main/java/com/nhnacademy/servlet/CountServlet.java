@@ -26,7 +26,7 @@ public class CountServlet extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        counter = Integer.parseInt(getServletConfig().getInitParameter("counter"));
+        counter = Integer.parseInt(getServletContext().getInitParameter("counter"));
     }
 
     @Override
